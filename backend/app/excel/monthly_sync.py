@@ -1,0 +1,56 @@
+"""
+Excel Monthly Workbook Generator for Project # hasep.
+Creates and appends daily vertical blocks with live Excel formulas, formatting,
+and printable page breaks using OpenPyXL.
+"""
+
+import os
+import logging
+from decimal import Decimal
+from typing import Dict, Any, Union, Optional
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.utils import get_column_letter
+
+from backend.app.schemas.financial_form import FinancialFormData
+from backend.app.core.config import settings
+
+logger = logging.getLogger(__name__)
+
+# Colors & Styles
+HEADER_FILL = PatternFill(start_color="1E3A8A", end_color="1E3A8A", fill_type="solid")
+SUBHEADER_FILL = PatternFill(start_color="3B82F6", end_color="3B82F6", fill_type="solid")
+ACCENT_FILL = PatternFill(start_color="F1F5F9", end_color="F1F5F9", fill_type="solid")
+TOTAL_FILL = PatternFill(start_color="FEF3C7", end_color="FEF3C7", fill_type="solid")
+
+FONT_HEADER = Font(name="Calibri", size=12, bold=True, color="FFFFFF")
+FONT_SUBHEADER = Font(name="Calibri", size=10, bold=True, color="FFFFFF")
+FONT_TITLE = Font(name="Calibri", size=14, bold=True, color="1E293B")
+FONT_BOLD = Font(name="Calibri", size=10, bold=True, color="000000")
+FONT_REGULAR = Font(name="Calibri", size=10, color="000000")
+
+ALIGN_CENTER = Alignment(horizontal="center", vertical="center", wrap_text=True)
+ALIGN_RIGHT = Alignment(horizontal="right", vertical="center")
+ALIGN_LEFT = Alignment(horizontal="left", vertical="center")
+
+THIN_BORDER_SIDE = Side(border_style="thin", color="CBD5E1")
+BORDER_ALL = Border(
+    left=THIN_BORDER_SIDE, right=THIN_BORDER_SIDE, top=THIN_BORDER_SIDE, bottom=THIN_BORDER_SIDE
+)
+
+
+def get_month_sheet_name(date_str: str) -> str:
+    """Returns worksheet name in format 'YYYY-MM' e.g. '2026-11'."""
+    try:
+        parts = date_str.split("-")
+        return f"{parts[0]}-{parts[1]}"
+    except Exception:
+        return "Financial_Archive"
+
+
+def append_daily_block_to_workbook(
+    workbook_path: str,
+    form_input: Union[Dict[str, Any], FinancialFormData]
+) -> str:
+    return _append_daily_block_to_workbook_impl(workbook_path, form_input)
+exec('def _append_daily_block_to_workbook_impl(\n    workbook_path: str,\n    form_input: Union[Dict[str, Any], FinancialFormData]\n) -> str:\n    """\n    Appends a structured vertical daily block with real formulas to the monthly worksheet.\n    Adds a page break after the block for printing.\n    """\n    if isinstance(form_input, FinancialFormData):\n        data = form_input.model_dump(mode="json")\n    else:\n        data = form_input\n    os.makedirs(os.path.dirname(os.path.abspath(workbook_path)), exist_ok=True)\n    if os.path.exists(workbook_path):\n        wb = openpyxl.load_workbook(workbook_path)\n    else:\n        wb = openpyxl.Workbook()\n        if "Sheet" in wb.sheetnames and len(wb.sheetnames) == 1:\n            wb.remove(wb["Sheet"])\n    sheet_name = get_month_sheet_name(data.get("form_date", "2026-11-01"))\n    if sheet_name in wb.sheetnames:\n        ws = wb[sheet_name]\n    else:\n        ws = wb.create_sheet(title=sheet_name)\n        ws.views.sheetView[0].rightToLeft = True\n    start_row = ws.max_row + 2 if ws.max_row > 1 else 1\n    ws.merge_cells(start_row=start_row, start_column=1, end_row=start_row, end_column=6)\n    cell = ws.cell(row=start_row, column=1)\n    cell.value = f"منصة آية — نموذج الإغلاق اليومي ({data.get(\'day_of_week\', \'\')} - {data.get(\'form_date\', \'\')})"\n    cell.font = FONT_TITLE\n    cell.alignment = ALIGN_CENTER\n    cell.fill = ACCENT_FILL\n    start_row += 2\n    ws.merge_cells(start_row=start_row, start_column=1, end_row=start_row, end_column=6)\n    sec_cell = ws.cell(row=start_row, column=1, value="سجل الدوام والحضور")\n    sec_cell.font = FONT_SUBHEADER\n    sec_cell.fill = SUBHEADER_FILL\n    sec_cell.alignment = ALIGN_CENTER\n    start_row += 1\n    att_headers = ["اسم الموظف", "الحالة", "وقت الحضور", "وقت الانصراف", "ساعات العمل", "ملاحظات"]\n    for col_idx, h in enumerate(att_headers, start=1):\n        c = ws.cell(row=start_row, column=col_idx, value=h)\n        c.font = FONT_HEADER\n        c.fill = HEADER_FILL\n        c.alignment = ALIGN_CENTER\n        c.border = BORDER_ALL\n    start_row += 1\n    attendance = data.get("attendance", [])\n    for emp in attendance:\n        if not emp.get("employee_name") and not emp.get("entry_time"):\n            continue\n        row_vals = [\n            emp.get("employee_name", ""),\n            emp.get("status", "حاضر"),\n            emp.get("entry_time", ""),\n            emp.get("exit_time", ""),\n            float(emp.get("duration_hours", 0.0)),\n            emp.get("notes", ""),\n        ]\n        for col_idx, v in enumerate(row_vals, start=1):\n            c = ws.cell(row=start_row, column=col_idx, value=v)\n            c.font = FONT_REGULAR\n            c.alignment = ALIGN_CENTER\n            c.border = BORDER_ALL\n        start_row += 1\n    start_row += 1\n    purch_header_row = start_row\n    ws.merge_cells(start_row=start_row, start_column=1, end_row=start_row, end_column=4)\n    p_sec = ws.cell(row=start_row, column=1, value="المشتريات")\n    p_sec.font = FONT_SUBHEADER\n    p_sec.fill = SUBHEADER_FILL\n    p_sec.alignment = ALIGN_CENTER\n    start_row += 1\n    p_headers = ["البيان / المادة", "المبلغ (JOD)", "رقم الفاتورة", "ملاحظات"]\n    for col_idx, h in enumerate(p_headers, start=1):\n        c = ws.cell(row=start_row, column=col_idx, value=h)\n        c.font = FONT_HEADER\n        c.fill = HEADER_FILL\n        c.alignment = ALIGN_CENTER\n        c.border = BORDER_ALL\n    start_row += 1\n    purch_start_row = start_row\n    purchases = data.get("purchases", [])\n    for p in purchases:\n        if not p.get("item") and Decimal(str(p.get("amount", 0))) == Decimal("0.00"):\n            continue\n        try:\n            amt = float(p.get("amount", 0.0))\n        except Exception:\n            amt = 0.0\n        row_vals = [p.get("item", ""), amt, p.get("invoice_number", ""), p.get("notes", "")]\n        for col_idx, v in enumerate(row_vals, start=1):\n            c = ws.cell(row=start_row, column=col_idx, value=v)\n            c.font = FONT_REGULAR\n            c.alignment = ALIGN_CENTER\n            c.border = BORDER_ALL\n            if col_idx == 2:\n                c.number_format = "#,##0.00"\n        start_row += 1\n    purch_end_row = start_row - 1\n    c_tot_lbl = ws.cell(row=start_row, column=1, value="مجموع المشتريات")\n    c_tot_lbl.font = FONT_BOLD\n    c_tot_lbl.border = BORDER_ALL\n    c_tot_lbl.fill = TOTAL_FILL\n    c_tot_val = ws.cell(row=start_row, column=2)\n    if purch_end_row >= purch_start_row:\n        c_tot_val.value = f"=SUM(B{purch_start_row}:B{purch_end_row})"\n    else:\n        c_tot_val.value = 0.0\n    c_tot_val.font = FONT_BOLD\n    c_tot_val.border = BORDER_ALL\n    c_tot_val.fill = TOTAL_FILL\n    c_tot_val.number_format = "#,##0.00"\n    purch_total_cell_ref = f"B{start_row}"\n    start_row += 2\n    ws.merge_cells(start_row=start_row, start_column=1, end_row=start_row, end_column=3)\n    e_sec = ws.cell(row=start_row, column=1, value="المصاريف النثرية")\n    e_sec.font = FONT_SUBHEADER\n    e_sec.fill = SUBHEADER_FILL\n    e_sec.alignment = ALIGN_CENTER\n    start_row += 1\n    e_headers = ["البيان / البند", "المبلغ (JOD)", "ملاحظات / المستفيد"]\n    for col_idx, h in enumerate(e_headers, start=1):\n        c = ws.cell(row=start_row, column=col_idx, value=h)\n        c.font = FONT_HEADER\n        c.fill = HEADER_FILL\n        c.alignment = ALIGN_CENTER\n        c.border = BORDER_ALL\n    start_row += 1\n    exp_start_row = start_row\n    expenses = data.get("expenses", [])\n    for e in expenses:\n        if not e.get("item") and Decimal(str(e.get("amount", 0))) == Decimal("0.00"):\n            continue\n        try:\n            amt = float(e.get("amount", 0.0))\n        except Exception:\n            amt = 0.0\n        row_vals = [e.get("item", ""), amt, e.get("notes", "")]\n        for col_idx, v in enumerate(row_vals, start=1):\n            c = ws.cell(row=start_row, column=col_idx, value=v)\n            c.font = FONT_REGULAR\n            c.alignment = ALIGN_CENTER\n            c.border = BORDER_ALL\n            if col_idx == 2:\n                c.number_format = "#,##0.00"\n        start_row += 1\n    exp_end_row = start_row - 1\n    c_etot_lbl = ws.cell(row=start_row, column=1, value="مجموع المصاريف")\n    c_etot_lbl.font = FONT_BOLD\n    c_etot_lbl.border = BORDER_ALL\n    c_etot_lbl.fill = TOTAL_FILL\n    c_etot_val = ws.cell(row=start_row, column=2)\n    if exp_end_row >= exp_start_row:\n        c_etot_val.value = f"=SUM(B{exp_start_row}:B{exp_end_row})"\n    else:\n        c_etot_val.value = 0.0\n    c_etot_val.font = FONT_BOLD\n    c_etot_val.border = BORDER_ALL\n    c_etot_val.fill = TOTAL_FILL\n    c_etot_val.number_format = "#,##0.00"\n    exp_total_cell_ref = f"B{start_row}"\n    start_row += 2\n    ws.merge_cells(start_row=start_row, start_column=1, end_row=start_row, end_column=4)\n    r_sec = ws.cell(row=start_row, column=1, value="مطابقة المبيعات والرصيد المالي")\n    r_sec.font = FONT_SUBHEADER\n    r_sec.fill = SUBHEADER_FILL\n    r_sec.alignment = ALIGN_CENTER\n    start_row += 1\n    sales = data.get("sales", {})\n    summary = data.get("summary", {})\n    reconcile_items = [\n        ("المبيعات الإجمالية", float(sales.get("sales", 0.0)), "الرصيد السابق", float(summary.get("previous_balance", 0.0))),\n        ("المرتجع", float(sales.get("returns", 0.0)), "زيادة (توريد)", float(summary.get("increase", 0.0))),\n        ("طلبات", float(sales.get("orders", 0.0)), "نقص (سحب)", float(summary.get("decrease", 0.0))),\n        ("كريم", float(sales.get("kareem", 0.0)), "مجموع المشتريات", f"={purch_total_cell_ref}"),\n        ("عشائي", float(sales.get("ashaayi", 0.0)), "مجموع المصاريف", f"={exp_total_cell_ref}"),\n        ("فيزا / بطاقة", float(sales.get("visa", 0.0)), "مجموع (مشتريات + مصاريف)", f"={purch_total_cell_ref}+{exp_total_cell_ref}"),\n        ("صافي المبيعات", f"=B{start_row}-B{start_row+1}", "الرصيد الحالي المحسوب", f"=D{start_row}+D{start_row+1}-D{start_row+2}"),\n    ]\n    for k1, v1, k2, v2 in reconcile_items:\n        c1 = ws.cell(row=start_row, column=1, value=k1)\n        c2 = ws.cell(row=start_row, column=2, value=v1)\n        c3 = ws.cell(row=start_row, column=3, value=k2)\n        c4 = ws.cell(row=start_row, column=4, value=v2)\n        for c in (c1, c2, c3, c4):\n            c.border = BORDER_ALL\n            c.font = FONT_REGULAR\n            c.alignment = ALIGN_CENTER\n        c2.number_format = "#,##0.00"\n        c4.number_format = "#,##0.00"\n        start_row += 1\n    for col in ws.columns:\n        max_len = 0\n        col_letter = get_column_letter(col[0].column)\n        for c in col:\n            val_str = str(c.value or "")\n            if len(val_str) > max_len and len(val_str) < 50:\n                max_len = len(val_str)\n        ws.column_dimensions[col_letter].width = max(max_len + 4, 16)\n    from openpyxl.worksheet.pagebreak import Break\n    ws.row_breaks.append(Break(id=start_row))\n    wb.save(workbook_path)\n    logger.info(f"Excel daily block written to {workbook_path} on sheet \'{sheet_name}\'")\n    return workbook_path\n', globals())

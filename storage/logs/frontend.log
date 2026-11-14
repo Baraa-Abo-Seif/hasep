@@ -1,0 +1,388 @@
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 144 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 121 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 130 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 129 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+7:41:11 PM [vite] http proxy error: /api/v1/auth/google/status
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16)
+7:41:11 PM [vite] http proxy error: /api/v1/google-sheets/status
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16)
+7:41:11 PM [vite] http proxy error: /api/v1/google-sheets/sync-jobs
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16)
+7:44:07 PM [vite] hmr update /src/app/App.tsx, /src/index.css
+7:44:07 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:44:07 PM [vite] page reload index.html
+7:44:39 PM [vite] hmr update /src/i18n/context.tsx, /src/index.css
+7:44:39 PM [vite] hmr invalidate /src/i18n/context.tsx Could not Fast Refresh ("useI18n" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:44:39 PM [vite] page reload src/i18n/context.tsx
+7:46:18 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:19 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:19 PM [vite] Internal server error: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx: Expected corresponding JSX closing tag for <aside>. (88:6)
+
+  86 |           <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |         </button>
+> 88 |       </div>
+     |       ^
+  89 |     </aside>
+  90 |   );
+  91 | };
+  Plugin: vite:react-babel
+  File: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx:88:6
+  86 |            <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |          </button>
+  88 |        </div>
+     |        ^
+  89 |      </aside>
+  90 |    );
+      at constructor (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4744:16)
+      at TypeScriptParserMixin.jsxParseElement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:39
+      at TypeScriptParserMixin.tryParse (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6998:20)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:18)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9436:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9503:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8678:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8332:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4781:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13822:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at TypeScriptParserMixin.parseExpressionBase (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at TypeScriptParserMixin.parseExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10182:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9825:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13447:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9774:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10356:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at TypeScriptParserMixin.parseBlock (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10337:10)
+      at TypeScriptParserMixin.parseFunctionBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9105:24)
+      at TypeScriptParserMixin.parseArrowExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9077:10)
+7:46:23 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:32 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:36 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:41 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:44 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:44 PM [vite] Internal server error: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx: Expected corresponding JSX closing tag for <aside>. (88:6)
+
+  86 |           <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |         </button>
+> 88 |       </div>
+     |       ^
+  89 |     </aside>
+  90 |   );
+  91 | };
+  Plugin: vite:react-babel
+  File: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx:88:6
+  86 |            <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |          </button>
+  88 |        </div>
+     |        ^
+  89 |      </aside>
+  90 |    );
+      at constructor (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4744:16)
+      at TypeScriptParserMixin.jsxParseElement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:39
+      at TypeScriptParserMixin.tryParse (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6998:20)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:18)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9436:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9503:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8678:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8332:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4781:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13822:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at TypeScriptParserMixin.parseExpressionBase (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at TypeScriptParserMixin.parseExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10182:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9825:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13447:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9774:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10356:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at TypeScriptParserMixin.parseBlock (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10337:10)
+      at TypeScriptParserMixin.parseFunctionBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9105:24)
+      at TypeScriptParserMixin.parseArrowExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9077:10)
+7:46:48 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:53 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:53 PM [vite] Internal server error: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx: Expected corresponding JSX closing tag for <aside>. (88:6)
+
+  86 |           <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |         </button>
+> 88 |       </div>
+     |       ^
+  89 |     </aside>
+  90 |   );
+  91 | };
+  Plugin: vite:react-babel
+  File: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx:88:6
+  86 |            <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |          </button>
+  88 |        </div>
+     |        ^
+  89 |      </aside>
+  90 |    );
+      at constructor (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4744:16)
+      at TypeScriptParserMixin.jsxParseElement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:39
+      at TypeScriptParserMixin.tryParse (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6998:20)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:18)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9436:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9503:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8678:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8332:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4781:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13822:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at TypeScriptParserMixin.parseExpressionBase (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at TypeScriptParserMixin.parseExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10182:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9825:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13447:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9774:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10356:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at TypeScriptParserMixin.parseBlock (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10337:10)
+      at TypeScriptParserMixin.parseFunctionBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9105:24)
+      at TypeScriptParserMixin.parseArrowExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9077:10)
+7:46:54 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:58 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:46:58 PM [vite] Internal server error: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx: Expected corresponding JSX closing tag for <aside>. (88:6)
+
+  86 |           <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |         </button>
+> 88 |       </div>
+     |       ^
+  89 |     </aside>
+  90 |   );
+  91 | };
+  Plugin: vite:react-babel
+  File: /home/bablo/Downloads/aya/frontend/src/components/layout/Sidebar.tsx:88:6
+  86 |            <span className="font-bold text-emerald-700">{language === 'ar' ? 'العربية' : 'English'}</span>
+  87 |          </button>
+  88 |        </div>
+     |        ^
+  89 |      </aside>
+  90 |    );
+      at constructor (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4744:16)
+      at TypeScriptParserMixin.jsxParseElement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:39
+      at TypeScriptParserMixin.tryParse (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:6998:20)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13811:18)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9436:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7773:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9503:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8678:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8332:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:4781:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at TypeScriptParserMixin.parseUpdate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13900:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at TypeScriptParserMixin.parseExprOps (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:14109:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at TypeScriptParserMixin.tsParseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13822:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13732:19)
+      at TypeScriptParserMixin.parseExpressionBase (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at TypeScriptParserMixin.allowInAnd (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at TypeScriptParserMixin.parseExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10182:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9825:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:13447:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9774:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10356:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at TypeScriptParserMixin.parseBlock (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:10337:10)
+      at TypeScriptParserMixin.parseFunctionBody (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9105:24)
+      at TypeScriptParserMixin.parseArrowExpression (/home/bablo/Downloads/aya/frontend/node_modules/@babel/parser/lib/index.js:9077:10)
+7:46:59 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:47:03 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:47:07 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:47:11 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:47:16 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:48:39 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+7:48:39 PM [vite] hmr update /src/pages/LandingPage.tsx, /src/index.css
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 132 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+7:49:25 PM [vite] http proxy error: /api/v1/history/stats
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16)
+7:49:25 PM [vite] http proxy error: /api/v1/documents?page=1&limit=20
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16)
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+Re-optimizing dependencies because vite config has changed
+
+  VITE v5.4.21  ready in 284 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 191 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+9:32:18 PM [vite] page reload index.html
+9:32:18 PM [vite] hmr update /src/i18n/context.tsx, /src/index.css
+9:32:18 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+9:32:18 PM [vite] hmr update /src/pages/SettingsPage.tsx, /src/index.css
+9:32:18 PM [vite] hmr update /src/index.css, /src/pages/UploadPage.tsx, /src/pages/ProcessingPage.tsx, /src/pages/DashboardPage.tsx, /src/pages/SettingsPage.tsx, /src/pages/ReviewPage.tsx
+
+> arabic-image-to-excel-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 128 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.0.108:5173/
+9:42:29 PM [vite] http proxy error: /api/v1/documents?page=1&limit=20
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1706:16)
